@@ -6,17 +6,16 @@
 package com.gildedrose.StrategyClasses;
 
 import com.gildedrose.Item;
+import com.gildedrose.TemplateClasses.GildedRoseTemplate;
 
 /**
  *
  * @author Sandoval-PC
  */
-public class SulfurasStrategy implements GildedRoseStrategy {
+public class SulfurasStrategy extends GildedRoseTemplate implements GildedRoseStrategy {
     
     @Override
-    public void updateItemQuality(Item item) {        
-        
-        System.out.println("This item cannot update its quality");
+    public void updateItemQuality(Item item) {
         
         /*
         int qualityValue = 0;
@@ -30,6 +29,21 @@ public class SulfurasStrategy implements GildedRoseStrategy {
             qualityValue--;
         }
         */
+        updateQuality(item);
     }
-    
+
+    @Override
+    public void modifyQuality(Item item) {
+        System.out.println("This item cannot update its quality");
+    }
+
+    @Override
+    public void reduceSellDate(Item item) {
+        System.out.println("This item will never be selled");
+    }
+
+    @Override
+    public void modifyQualityAfterSellDateReduced(Item item) {
+        System.out.println("This item cannot update its quality");
+    }
 }

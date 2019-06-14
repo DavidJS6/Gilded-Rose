@@ -70,10 +70,12 @@ class GildedRose {
                 }
             }
             */
-            
+
+            /*
             if (!item.name.equals(SULFURAS_VALUE)) {
                 item.sellIn = item.sellIn - 1;
             }
+            */
             
             
             /*

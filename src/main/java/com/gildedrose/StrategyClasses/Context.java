@@ -13,7 +13,7 @@ import com.gildedrose.Item;
  */
 public class Context {
     
-    GildedRoseStrategy strategy;
+    private GildedRoseStrategy strategy;
     
     public void setStrategy(GildedRoseStrategy strategy){
         this.strategy = strategy;

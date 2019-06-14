@@ -6,15 +6,19 @@
 package com.gildedrose.StrategyClasses;
 
 import com.gildedrose.Item;
+import com.gildedrose.TemplateClasses.GildedRoseTemplate;
 
 /**
  *
  * @author Sandoval-PC
  */
-public class AgedBrieStrategy implements GildedRoseStrategy {
-    
+public class AgedBrieStrategy extends GildedRoseTemplate implements GildedRoseStrategy {
+
+    private final int QUALITY_OBTAINED_PER_DAY = 1;
+
     @Override
     public void updateItemQuality(Item item) {
+        /*
         int qualityValue = 1;
         
         if(item.sellIn < 0){
@@ -25,6 +29,26 @@ public class AgedBrieStrategy implements GildedRoseStrategy {
             item.quality += 1;
             qualityValue--;
         }
+        */
+        updateQuality(item);
     }
-    
+
+    @Override
+    public void modifyQuality(Item item) {
+        if(isQualityBelowMaxValue(item)) {
+            item.quality += QUALITY_OBTAINED_PER_DAY;
+        }
+    }
+
+    @Override
+    public void reduceSellDate(Item item) {
+        item.sellIn -= 1;
+    }
+
+    @Override
+    public void modifyQualityAfterSellDateReduced(Item item) {
+        if(isQualityBelowMaxValue(item)) {
+            item.quality += QUALITY_OBTAINED_PER_DAY;
+        }
+    }
 }
