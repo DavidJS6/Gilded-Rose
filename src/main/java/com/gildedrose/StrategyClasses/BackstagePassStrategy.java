@@ -32,12 +32,7 @@ public class BackstagePassStrategy extends GildedRoseTemplate implements GildedR
         if (item.sellIn <= AMOUNT_OF_DAYS_BEFORE_TRIPLE) {
             qualityAdded = 3;
         }
-
-        for(int i = qualityAdded; i > 0; i--) {
-            if (isQualityBelowMaxValue(item)) {
-                item.quality += 1;
-            }
-        }
+        increasyQuality(item, qualityAdded);
     }
 
     @Override

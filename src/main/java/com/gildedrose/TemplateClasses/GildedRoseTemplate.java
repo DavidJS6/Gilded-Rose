@@ -13,7 +13,22 @@ public abstract class GildedRoseTemplate {
         if(item.sellIn < 0) {
             modifyQualityAfterSellDateReduced(item);
         }
-
+    }
+    
+    protected void increasyQuality(Item item, int value){
+        for(int i = value; i > 0; i--) {
+            if(isQualityBelowMaxValue(item)){
+                item.quality += 1;
+            }
+        }
+    }
+    
+    protected void decreasyQuality(Item item, int value){
+        for(int i = value; i > 0; i--) {
+            if (isQualityOverMinValue(item)) {
+                item.quality -= 1;
+            }
+        }
     }
 
     protected boolean isQualityBelowMaxValue(Item item){

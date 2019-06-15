@@ -30,6 +30,12 @@ public class Main {
                 new Item("Conjured Mana Cake", 1, 6),
                 new Item("Aged Brie", 0, 0),
                 new Item("Conjured Mana Cake", 0, 6),
+                new Item("Conjured Mana Cake", -2, 6),
+                new Item("Backstage passes to a TAFKAL80ETC concert", 4, 42),
+                new Item("Backstage passes to a TAFKAL80ETC concert", 10, 45),
+                new Item("Aged Brie", -4, 10), //
+                new Item("Elixir of the Mongoose", -2, 7), //
+                new Item("Sulfuras, Hand of Ragnaros", -10, 80),
                 // this conjured item does not work properly yet
                 new Item("Conjured Mana Cake", 3, 6) };
 

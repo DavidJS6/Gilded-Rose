@@ -23,9 +23,7 @@ public class DefaultStrategy extends GildedRoseTemplate implements GildedRoseStr
 
     @Override
     public void modifyQuality(Item item) {
-        if(isQualityOverMinValue(item)) {
-            item.quality -= QUALITY_LOST_PER_DAY;
-        }
+        decreasyQuality(item, QUALITY_LOST_PER_DAY);
     }
 
     @Override
@@ -35,8 +33,6 @@ public class DefaultStrategy extends GildedRoseTemplate implements GildedRoseStr
 
     @Override
     public void modifyQualityAfterSellDateReduced(Item item) {
-        if(isQualityOverMinValue(item)) {
-            item.quality -= QUALITY_LOST_PER_DAY;
-        }
+        decreasyQuality(item, QUALITY_LOST_PER_DAY);
     }
 }

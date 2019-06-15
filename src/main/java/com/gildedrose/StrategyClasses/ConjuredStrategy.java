@@ -23,11 +23,7 @@ public class ConjuredStrategy extends GildedRoseTemplate implements GildedRoseSt
 
     @Override
     public void modifyQuality(Item item) {
-        for(int i = QUALITY_LOST_PER_DAY; i > 0; i--) {
-            if (isQualityOverMinValue(item)) {
-                item.quality -= 1;
-            }
-        }
+        decreasyQuality(item, QUALITY_LOST_PER_DAY);
     }
 
     @Override
@@ -37,10 +33,6 @@ public class ConjuredStrategy extends GildedRoseTemplate implements GildedRoseSt
 
     @Override
     public void modifyQualityAfterSellDateReduced(Item item) {
-        for(int i = QUALITY_LOST_PER_DAY; i > 0; i--) {
-            if (isQualityOverMinValue(item)) {
-                item.quality -= 1;
-            }
-        }
+        decreasyQuality(item, QUALITY_LOST_PER_DAY);
     }
 }

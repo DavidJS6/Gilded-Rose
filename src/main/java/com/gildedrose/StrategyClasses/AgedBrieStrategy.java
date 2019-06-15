@@ -23,9 +23,7 @@ public class AgedBrieStrategy extends GildedRoseTemplate implements GildedRoseSt
 
     @Override
     public void modifyQuality(Item item) {
-        if(isQualityBelowMaxValue(item)) {
-            item.quality += QUALITY_OBTAINED_PER_DAY;
-        }
+        increasyQuality(item, QUALITY_OBTAINED_PER_DAY);
     }
 
     @Override
@@ -35,8 +33,6 @@ public class AgedBrieStrategy extends GildedRoseTemplate implements GildedRoseSt
 
     @Override
     public void modifyQualityAfterSellDateReduced(Item item) {
-        if(isQualityBelowMaxValue(item)) {
-            item.quality += QUALITY_OBTAINED_PER_DAY;
-        }
+        increasyQuality(item, QUALITY_OBTAINED_PER_DAY);
     }
 }

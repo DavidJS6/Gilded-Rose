@@ -16,6 +16,7 @@ class GildedRose {
     private final String CONJURED_VALUE = "Conjured Mana Cake";
 
     /*
+    * REQUERIMIENTOS
     * Tipos de comportamiento que se tienen:
     * Default: Por cada dia que pasa su valor quality se reduce en 1.
     * Aged Brie: Por cada dia que pasa su valor quality aumenta en 1
