@@ -16,19 +16,6 @@ public class SulfurasStrategy extends GildedRoseTemplate implements GildedRoseSt
     
     @Override
     public void updateItemQuality(Item item) {
-        
-        /*
-        int qualityValue = 0;
-        
-        if(this.item.sellIn < 0){
-            qualityValue = qualityValue * 2;
-        }
-        
-        while(item.quality < 50 && qualityValue > 0){
-            this.item.quality += 1;
-            qualityValue--;
-        }
-        */
         updateQuality(item);
     }
 
@@ -39,7 +26,7 @@ public class SulfurasStrategy extends GildedRoseTemplate implements GildedRoseSt
 
     @Override
     public void reduceSellDate(Item item) {
-        System.out.println("This item will never be selled");
+        System.out.println("This item will never be sold");
     }
 
     @Override

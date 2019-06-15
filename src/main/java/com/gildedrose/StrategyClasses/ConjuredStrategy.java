@@ -18,18 +18,6 @@ public class ConjuredStrategy extends GildedRoseTemplate implements GildedRoseSt
 
     @Override
     public void updateItemQuality(Item item) {
-        /*
-        int qualityValue = 2;
-        
-        if(item.sellIn < 0){
-            qualityValue = qualityValue * 2;
-        }
-        
-        while(item.quality < 50 && qualityValue > 0){
-            item.quality -= 1;
-            qualityValue--;
-        }
-        */
         updateQuality(item);
     }
 

@@ -20,32 +20,6 @@ public class BackstagePassStrategy extends GildedRoseTemplate implements GildedR
 
     @Override
     public void updateItemQuality(Item item) {
-        /*
-        int qualityValue = 1;
-        
-        if(item.sellIn < 11){
-            qualityValue = 2;
-        }
-        if(item.sellIn < 6){
-            qualityValue = 3;
-        }
-        if(item.sellIn < 0){
-            qualityValue = item.quality * -1;
-        }
-        
-        if(item.sellIn < 0){
-            qualityValue = qualityValue * 2;
-        }
-        
-        while(item.quality < 50 && qualityValue > 0){
-            item.quality += 1;
-            qualityValue--;
-        }
-        
-        if(qualityValue < 0){
-            item.quality = 0;
-        }
-        */
         updateQuality(item);
     }
 

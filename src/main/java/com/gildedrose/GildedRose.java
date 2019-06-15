@@ -6,7 +6,6 @@ import com.gildedrose.StrategyClasses.ConjuredStrategy;
 import com.gildedrose.StrategyClasses.Context;
 import com.gildedrose.StrategyClasses.DefaultStrategy;
 import com.gildedrose.StrategyClasses.SulfurasStrategy;
-import com.gildedrose.StrategyClasses.GildedRoseStrategy;
 
 class GildedRose {
     public Item[] items;
@@ -42,85 +41,6 @@ class GildedRose {
     public void updateQuality() {
 
         for (Item item : items) {
-
-            /*
-            if (!item.name.equals(AGED_BRIE_VALUE) && !item.name.equals(BACKSTAGE_PASS_VALUE)) {
-                if (item.quality > 0) {
-                    if (!item.name.equals(SULFURAS_VALUE)) {
-                        item.quality = item.quality - 1;
-                    }
-                }
-            } else {
-                if (item.quality < 50) {
-                    item.quality = item.quality + 1;
-
-                    if (item.name.equals(BACKSTAGE_PASS_VALUE)) {
-                        if (item.sellIn < 11) {
-                            if (item.quality < 50) {
-                                item.quality = item.quality + 1;
-                            }
-                        }
-
-                        if (item.sellIn < 6) {
-                            if (item.quality < 50) {
-                                item.quality = item.quality + 1;
-                            }
-                        }
-                    }
-                }
-            }
-            */
-
-            /*
-            if (!item.name.equals(SULFURAS_VALUE)) {
-                item.sellIn = item.sellIn - 1;
-            }
-            */
-            
-            
-            /*
-            int qualityValue;
-            switch (item.name) {
-                case AGED_BRIE_VALUE:
-                    qualityValue = 1;
-                    break;
-                case BACKSTAGE_PASS_VALUE:
-                    qualityValue = 1;
-                    if(item.sellIn < 11){
-                        qualityValue = 2;
-                    }
-                    if(item.sellIn < 6){
-                        qualityValue = 3;
-                    }
-                    if(item.sellIn < 0){
-                        qualityValue = item.quality * -1;
-                    }
-                    break;
-                case SULFURAS_VALUE:
-                    qualityValue = 0;
-                    break;
-                case CONJURED_VALUE:
-                    qualityValue = -2;
-                    break;
-                default:
-                    qualityValue = -1;
-                    break;
-            }
-            
-            if(item.sellIn < 0){
-                qualityValue = qualityValue * 2;
-            }
-            
-            item.quality += qualityValue;
-            
-            if(item.quality < 0){
-                item.quality = 0;
-            }
-            if(item.quality > 50 && !item.name.equals(SULFURAS_VALUE)){
-                item.quality = 50;
-            }
-            */
-
             Context context = new Context();
             switch (item.name) {
                 case AGED_BRIE_VALUE:
@@ -140,28 +60,6 @@ class GildedRose {
                     break;
             }            
             context.executeStrategy(item);
-
-
-            /*
-            if (item.sellIn < 0) {
-                if (!item.name.equals(AGED_BRIE_VALUE)) {
-                    if (!item.name.equals(BACKSTAGE_PASS_VALUE)) {
-                        if (item.quality > 0) {
-                            if (!item.name.equals(SULFURAS_VALUE)) {
-                                item.quality = item.quality - 1;
-                            }
-                        }
-                    } else {
-                        item.quality = 0;
-                    }
-                } else {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
-                    }
-                }
-            }
-            */
-
         }
 
     }
