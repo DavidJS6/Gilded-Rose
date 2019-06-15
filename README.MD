@@ -14,15 +14,14 @@ Contiene el código original del [reposotorio de Gilded Rose](https://github.com
 ## GildedRose 
 Es el resultado de factorizar el código y aplicar patrones de diseño 
 al código de la clase OriginalGildedRose, además es en esta clase donde 
-se implementa el nuevo requerimiento que se detalla en los [requerimientos](DETAILS.md)) 
-del repositorio Gilded Rose el cual es implementar el comportamiento para los
-items de tipo "Conjured".
+se implementa el nuevo requerimiento que se detalla en los [requerimientos del repositorio Gilded Rose](DETAILS.md) 
+el cual es implementar la actualizacion de la calidad para los items de tipo "Conjured".
 
 Entre los cambios que se hicieron para la refactorización del código se encuentran:
 
 - Se cambio el for que se utilizaba para recorrer la lista de items por un foreach.
 - Se añadieron variables constantes para identificar a los diferentes tipos de items
-que se encontraban en la lista, estas variables son: AGED_BRIE_VALUE, BACKSTAGE_PASS_VALUE,
+que se encuentran en la lista, estas variables son: AGED_BRIE_VALUE, BACKSTAGE_PASS_VALUE,
 SULFURAS_VALUE y CONJURED_VALUE.
 - Se añadieron constantes para definir el aumento o reducción de la calidad que cada
 item recibia por cada día que pasaba.
