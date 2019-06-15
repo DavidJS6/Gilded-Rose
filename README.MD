@@ -9,7 +9,7 @@ El proyecto cuenta con dos clases donde se encuentra el código Gilded Rose
 - ##### GildedRose
 
 ## OriginalGildedRose
-Contiene el código original del [reposotorio de Gilded Rose](https://github.com/emilybache/GildedRose-Refactoring-Kata)
+Contiene el código original del [repositorio de Gilded Rose](https://github.com/emilybache/GildedRose-Refactoring-Kata)
 
 ## GildedRose 
 Es el resultado de factorizar el código y aplicar patrones de diseño 
@@ -29,7 +29,7 @@ item recibia por cada día que pasaba.
 calidad de los diferentes items, a excepcion de los items legendarios, estas variables
 son: MAX_QUALITY_VALUE_NO_LEGENDARY y MIN_QUALITY_VALUE.
 
-Ademàs, para la resolución del problema se aplicaron los siguientes patrones:
+Además, para la resolución del problema se aplicaron los siguientes patrones:
 
 ##### Patrón Estrategia (Strategy): 
 Para definir las estrategias que se utilizan para actualizar la calidad
@@ -37,7 +37,7 @@ de los diferentes items.
 
 ##### Patrón Método Plantilla (Template Method)
 Para la implementación de las estrategias, esto debido a que el proceso que
-se sigue para la actualización de la calidad en los items es bastante parecido
-y las pocas diferencias que tienen en su comportamiento, las cuales se detallan en los
-[requerimientos](DETAILS.md)), se implementan en métodos las cuales se encuentran
+se sigue para la actualización de la calidad en los diferentes items es bastante parecido
+y las pocas diferencias que tienen en su actualización, las cuales se detallan en los
+[requerimientos del mismo repositorio](DETAILS.md)), se implementan en métodos que se encuentran
 dentro de cada estrategia y se utilizan en el método plantilla.
